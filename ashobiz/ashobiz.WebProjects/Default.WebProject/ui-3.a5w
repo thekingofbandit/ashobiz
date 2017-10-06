@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<head>
+
+
+<%a5
+Delete tmpl_ui_3
+DIM tmpl_ui_3 as P
+tmpl_ui_3 = a5w_load_component("ui_3") ''SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:ui_3)
+
+'Override settings start -----------------------------------------
+tmpl_ui_3.override_settings = <<%override_settings%
+	.alias = "ui_3"
+_dialogFilename = "ui_3"
+	_gridFilename = "ui_3"
+%override_settings%
+
+
+a5w_resolveVariablesInOverrideSettings(tmpl_ui_3,session,local_variables())
+ 
+'Override settings end -----------------------------------------
+
+delete x_ui_3
+dim x_ui_3 as p
+x_ui_3 = a5w_run_Component(tmpl_ui_3) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl) (EDIT:ui_3)
+
+?x_ui_3.Output.Head.JavaScript
+?x_ui_3.Output.Head.CSS_Link
+
+?x_ui_3.Output.Head.Title 
+%>
+
+
+
+
+</head>
+
+
+<body class="AlphaPage">
+
+
+
+
+<%a5 ?x_ui_3.Output.Body.Dialog2_HTML %>
+<%a5 ?a5dialogHelper_generateCORSHeaders() %>
+
+</body>
+
+</html>
+

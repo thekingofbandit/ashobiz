@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<head>
+
+
+<%a5
+Delete tmpl__6
+DIM tmpl__6 as P
+tmpl__6 = a5w_load_component("_6") ''SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:_6)
+
+'Override settings start -----------------------------------------
+tmpl__6.override_settings = <<%override_settings%
+	.alias = "_6"
+_dialogFilename = "_6"
+	_gridFilename = "_6"
+%override_settings%
+
+
+a5w_resolveVariablesInOverrideSettings(tmpl__6,session,local_variables())
+ 
+'Override settings end -----------------------------------------
+
+delete x__6
+dim x__6 as p
+x__6 = a5w_run_Component(tmpl__6) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl) (EDIT:_6)
+
+?x__6.Output.Head.JavaScript
+?x__6.Output.Head.CSS_Link
+
+?x__6.Output.Head.Title 
+%>
+
+
+
+
+</head>
+
+
+<body class="GrGrayPage">
+
+
+
+
+<%a5 ?x__6.Output.Body.Dialog2_HTML %>
+<%a5 ?a5dialogHelper_generateCORSHeaders() %>
+
+</body>
+
+</html>
+
